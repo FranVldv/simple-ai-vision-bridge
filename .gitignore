@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencias (No se suben porque son muy pesadas)
+node_modules/
+
+# Variables de entorno (¡VITAL! Evita que se filtren tus claves)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Compilación
+dist/
+build/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

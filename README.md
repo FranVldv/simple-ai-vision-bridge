@@ -1,19 +1,20 @@
 # Simple AI Vision Bridge
 
-Una solución ligera y preparada para producción para analizar imágenes y documentos utilizando IA. Este módulo abstrae la complejidad de la API de OpenAI, permitiendo realizar análisis visuales con cualquier conjunto de reglas en segundos.
+A lightweight, production-ready solution for analyzing images and documents using AI. This module abstracts the complexity of the OpenAI Vision API, allowing you to perform visual analysis with any custom rule set in seconds.
 
-## 💡 ¿Por qué usar esto?
-En lugar de configurar toda la petición de OpenAI cada vez, este helper permite enviar una imagen y un set de instrucciones personalizadas, obteniendo una respuesta procesada.
+## 💡 Why use this?
+Instead of configuring the entire OpenAI request every time, this helper allows you to send an image and a set of custom instructions, receiving a clean, processed response.
 
-## 🛠️ Instalación y Uso
-1. Clonar el repositorio.
-2. Instalar dependencias: `npm install openai dotenv`
-3. Configurar tu `OPENAI_API_KEY` en el `.env`.
+## 🛠️ Installation & Setup
+1. Clone the repository.
+2. Install dependencies: `npm install openai dotenv`
+3. Configure your `OPENAI_API_KEY` in the `.env` file.
 
-## 📂 Ejemplo de implementación
+## 📂 Implementation Example
 ```javascript
 import { analyzeImageWithAI } from './vision-helper.js';
 
-const prompt = "Valida si esta boleta es de hoy y si supera los $5000.";
-const respuesta = await analyzeImageWithAI(urlDeImagen, prompt);
-console.log(respuesta);
+const prompt = "Validate if this receipt is from today and if the total exceeds $50.00.";
+const response = await analyzeImageWithAI(imageUrl, prompt);
+
+console.log(response);
